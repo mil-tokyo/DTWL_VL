@@ -37,10 +37,7 @@ videomaxlen=(int)(max(training_data.maxframelen,test_data.maxframelen,eval_data.
 
 train_loader = torch.utils.data.DataLoader(dataset=training_data,
                          batch_size=BATCH_SIZE, shuffle=True)
-'''
-test_loader = torch.utils.data.DataLoader(dataset=test_data[num_train:],
-                         batch_size=BATCH_SIZE, shuffle=False)
-'''
+
 
 MAXLEN=(int)(videomaxlen*1.5)
 
@@ -83,7 +80,7 @@ class IndexPositionalEncoding(nn.Module):
 
         # Not a parameter
         self.register_buffer('pos_table', self._get_sinusoid_encoding_table(n_position, d_hid))
-        print(n_position,"line17")
+
 
     def _get_sinusoid_encoding_table(self, n_position, d_hid):
         ''' Sinusoid position encoding table '''
@@ -108,7 +105,7 @@ class PositionalEncoding(nn.Module):
 
         # Not a parameter
         self.register_buffer('pos_table', self._get_sinusoid_encoding_table(n_position, d_hid))
-        print(n_position,"line44")
+
 
     def _get_sinusoid_encoding_table(self, n_position, d_hid):
         ''' Sinusoid position encoding table '''
@@ -329,8 +326,7 @@ if __name__ == '__main__':
     if cuda:
         model.to(device)
         #model=torch.nn.DataParallel(model,gpu_ids)
-        #model.to(device)
-        #model.to(device)
+
     if os.path.isfile(filename):
         print("=> loading checkpoint '{}'".format(filename))
         checkpoint = torch.load(filename)
@@ -481,7 +477,6 @@ if __name__ == '__main__':
         state = {'epoch': epoch, 'state_dict': model.state_dict(),'optimizer': G_optimizer.state_dict(), 'random': torch.get_rng_state(), 'evalloss': G_evalloss.to('cpu'),'scheduler': scheduler.state_dict(),'loss_count':loss_count,}
         torch.save(state, filename)
 
-        #D_lr_scheduler.step()
 
     writer.close()
     #torch.save(model.module.state_dict(), "text20_res_model.pt")
@@ -524,7 +519,7 @@ if __name__ == '__main__':
 
             for j in range(BATCH_SIZE):
                 tl=torch.where(fake_video[j,:,18]>END_THRE)[0]
-                #print("tl=",tl)
+
 
                 if(len(tl)==0):
                     endframenum=(videomaxlen+2)
