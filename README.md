@@ -35,4 +35,4 @@ We refer the code at https://github.com/vincent-leguen/DILATE, which is code for
 
 We refer to https://github.com/jadore801120/attention-is-all-you-need-pytorch, for the structure of the model. 
 
-The License file of https://github.com/jadore801120/attention-is-all-you-need-pytorch is in the folder of each settings("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL"), and license file of https://github.com/vincent-leguen/DILATE is in the folder named "loss" in the folder which includes the code related to the repository("DILATE_VL_active", "DILATE_VL_pad").
+The license file of https://github.com/jadore801120/attention-is-all-you-need-pytorch is in the folder of each settings("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL"), and license file of https://github.com/vincent-leguen/DILATE is in the folder named "loss" in the folder which includes the code related to the repository("DILATE_VL_active", "DILATE_VL_pad").
