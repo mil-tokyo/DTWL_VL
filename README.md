@@ -19,3 +19,5 @@ numpy:  1.17.2
 Python: 3.7.4
 
 
+You can start training by entering the folder ("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL") and
+running "python Models.py" .
