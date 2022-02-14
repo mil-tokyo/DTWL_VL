@@ -29,10 +29,13 @@ running "python Models.py".
 Our proposed loss is implemented in DTWL_VL/SDTWVL.py .
 
 
-## Acknowledgements 
+## Reference and Acknowledgements 
 
 We refer the code at https://github.com/vincent-leguen/DILATE, which is code for the NeurIPS 2019 paper "Shape and Time Distortion Loss for Training Deep Time Series Forecasting Models" (Le Guen, Vincent and Thome, Nicolas), for "DILATE_VL_pad" and "DILATE_VL_active".
 
 We refer to https://github.com/jadore801120/attention-is-all-you-need-pytorch, for the structure of the model. 
 
 The license file of https://github.com/jadore801120/attention-is-all-you-need-pytorch is in the folder of each settings("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL"), and license file of https://github.com/vincent-leguen/DILATE is in the folder named "loss", which includes the code related to the repository(In "DILATE_VL_active", "DILATE_VL_pad").
+
+The code for the model architecture (Written in "Models.py", "transformer/Layers.py", "transformer/Modules.py", "transformer/SubLayers.py" in all the training code folder) is based on the implementation of https://github.com/jadore801120/attention-is-all-you-need-pytorch, and
+the code for DILATE loss ("loss/path_soft_dtw.py", "loss/dilate_loss.py", "loss/soft_dtw.py" in "DILATE_VL_active", "DILATE_VL_pad") is based on https://github.com/vincent-leguen/DILATE.
