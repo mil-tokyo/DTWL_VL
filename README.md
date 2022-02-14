@@ -2,7 +2,7 @@
 
 ### Ayaka Ideno, Yusuke Mukuta, and Tatsuya Harada
 
-In our [paper](https://dl.acm.org/doi/10.1145/3469877.3495644), we propose loss "DTW-like method for variable-length data (DTWL_VL)".
+In our [paper](https://dl.acm.org/doi/10.1145/3469877.3495644), we propose loss "DTW-like method for variable-length data (DTWL-VL)".
 
 This repository has the code for "Generation of Variable-Length Time Series from Text using Dynamic Time Warping-Based Method".
 The codes for implementation stated in the paper, and the code for creating dataset.
