@@ -1,4 +1,4 @@
-''' D1efine the Transformer model '''
+''' Define the Transformer model '''
 import torch
 gpu_ids=[3]
 BATCH_SIZE=100
@@ -26,9 +26,9 @@ DATA_NUM=10000
 num_test=1000
 thre_attn=0.1
 
-training_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",0,num_train)
-eval_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",num_train,eval_train+num_train)
-test_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",num_train+eval_train,DATA_NUM)
+training_data = dataload.Mydatasets("../DatasetCreationCode_40",0,num_train)
+eval_data = dataload.Mydatasets("../DatasetCreationCode_40",num_train,eval_train+num_train)
+test_data = dataload.Mydatasets("../DatasetCreationCode_40",num_train+eval_train,DATA_NUM)
 train_loader = torch.utils.data.DataLoader(dataset=training_data,
                          batch_size=BATCH_SIZE, shuffle=True)
 eval_loader = torch.utils.data.DataLoader(dataset=eval_data,
@@ -253,7 +253,7 @@ class Transformer(nn.Module):
 
         super().__init__()
 
-        #self.src_pad_idx, self.trg_pad_idx = src_pad_idx, trg_pad_idx
+
 
         self.encoder = Encoder(
             n_position=n_position,
@@ -479,8 +479,6 @@ if __name__ == '__main__':
 
 
     writer.close()
-    #torch.save(model.module.state_dict(), "text20_res_model.pt")
-    #torch.save(model.state_dict(), "text20_res_model.pt")
     model.load_state_dict(torch.load("text20_res_model.pt"))
 
 

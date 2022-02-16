@@ -35,6 +35,8 @@ class Mydatasets(torch.utils.data.Dataset):
         self.maxframelen=0
         file_list = sorted(glob.glob(data_folder+'/madevideo/*/'))
         for i in file_list[first:last]:
+
+
             npz = np.load(i+'data.npz')
             textvec=torch.empty(0,len_word+1)
             with open(i+'story.txt') as f:
@@ -59,7 +61,6 @@ class Mydatasets(torch.utils.data.Dataset):
             time2[-1][0]=len(frame)-1
             time2[-1][1]=len(frame)
             tmpdata.append((frame2,textvec,raw_text,time2))
-
 
 
         for i in tmpdata:
@@ -96,7 +97,7 @@ class Mydatasets(torch.utils.data.Dataset):
             out_datalabel = self.transform(out_data)
         return out_dataframe.float(),  out_label.float(),label_len,frame_len,time
 
-        
+
 
     def getrawtext(self,idx):
         return self.raw_text[idx]

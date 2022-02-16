@@ -1,4 +1,4 @@
-''' D1efine the Transformer model '''
+''' Define the Transformer model '''
 import torch
 gpu_ids=[3]
 BATCH_SIZE=100
@@ -26,9 +26,9 @@ DATA_NUM=10000
 num_test=1000
 thre_attn=0.1
 
-training_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",0,num_train)
-eval_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",num_train,eval_train+num_train)
-test_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",num_train+eval_train,DATA_NUM)
+training_data = dataload.Mydatasets("../DatasetCreationCode_40",0,num_train)
+eval_data = dataload.Mydatasets("../DatasetCreationCode_40",num_train,eval_train+num_train)
+test_data = dataload.Mydatasets("../DatasetCreationCode_40",num_train+eval_train,DATA_NUM)
 train_loader = torch.utils.data.DataLoader(dataset=training_data,
                          batch_size=BATCH_SIZE, shuffle=True)
 eval_loader = torch.utils.data.DataLoader(dataset=eval_data,
@@ -391,7 +391,6 @@ if __name__ == '__main__':
             for i in range(BATCH_SIZE):
                 loss, loss_shape, loss_temporal = dilate_loss(frame[i:i+1,:framecomp_num[i],0:(D_model_f-1)],fake_video[i:i+1,:framecomp_num[i],0:(D_model_f-1)],alpha, gamma, device)
                 G_difloss+=loss/framecomp_num[i]
-                #G_difloss+=-1*torch.mean(frame[i][:framecomp_num[i],0:9]*(torch.log(fake_video[i][:framecomp_num[i],0:9]*(1-9*epsilon)+epsilon)))-torch.mean(frame[i][:framecomp_num[i],9:18]*(torch.log(fake_video[i][:framecomp_num[i],9:18]*(1-9*epsilon)+epsilon)))
 
                 G_endloss+=-1*torch.mean(torch.sum(torch.log(ifend[i][(framecomp_num[i]-1):]*(1-2*epsilon)+epsilon))+torch.sum(torch.log((1-ifend[i][:framecomp_num[i]-1])*(1-2*epsilon)+epsilon)))
 
@@ -475,11 +474,10 @@ if __name__ == '__main__':
         state = {'epoch': epoch, 'state_dict': model.state_dict(),'optimizer': G_optimizer.state_dict(), 'random': torch.get_rng_state(), 'evalloss': G_evalloss.to('cpu'),'scheduler': scheduler.state_dict(),'loss_count':loss_count,}
         torch.save(state, filename)
 
-        #D_lr_scheduler.step()
+
 
     writer.close()
-    #torch.save(model.module.state_dict(), "text20_res_model.pt")
-    #torch.save(model.state_dict(), "text20_res_model.pt")
+
     model.load_state_dict(torch.load("text20_res_model.pt"))
 
 
@@ -517,7 +515,7 @@ if __name__ == '__main__':
 
             for j in range(BATCH_SIZE):
                 tl=torch.where(fake_video[j,:,18]>END_THRE)[0]
-                
+
 
                 if(len(tl)==0):
                     endframenum=(videomaxlen+2)
