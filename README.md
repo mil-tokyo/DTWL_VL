@@ -30,12 +30,12 @@ You need to download it from https://nlp.stanford.edu/data/glove.6B.zip (Jeffrey
 
 
 Also, you need to create the data for this experiment by running the code "textmake_withtime.py" in "DataCreation_40".
-You need to put the folder in the same folder the folder for the experiment exists, or edit the path "../DatasetCreationCode_40" in "Models.py"
+You need to put the folder where the same folder the folder for the experiment exists, or edit the path "../DatasetCreationCode_40" in "Models.py"
  for every experiment data.
 
 ##  Training Example
 You can start training by entering the folder ("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL") and
-running "python Models.py".
+running `python Models.py`.
 
 
 Our proposed loss is implemented in DTWL_VL/SDTWVL.py .
