@@ -1,4 +1,4 @@
-''' D1efine the Transformer model '''
+''' Define the Transformer model '''
 import torch
 gpu_ids=[3]
 BATCH_SIZE=100
@@ -20,17 +20,15 @@ DATA_NUM=10000
 num_test=1000
 
 
-training_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",0,num_train)
-eval_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",num_train,eval_train+num_train)
-test_data = dataload.Mydatasets("../2var_shortwave_text40_rec2",num_train+eval_train,DATA_NUM)
+training_data = dataload.Mydatasets("../DatasetCreationCode_40",0,num_train)
+eval_data = dataload.Mydatasets("../DatasetCreationCode_40",num_train,eval_train+num_train)
+test_data = dataload.Mydatasets("../DatasetCreationCode_40",num_train+eval_train,DATA_NUM)
 train_loader = torch.utils.data.DataLoader(dataset=training_data,
                          batch_size=BATCH_SIZE, shuffle=True)
 eval_loader = torch.utils.data.DataLoader(dataset=eval_data,
                          batch_size=BATCH_SIZE, shuffle=True)
 videomaxlen=(int)(max(training_data.maxframelen,test_data.maxframelen,eval_data.maxframelen)*1.2)
 
-train_loader = torch.utils.data.DataLoader(dataset=training_data,
-                         batch_size=BATCH_SIZE, shuffle=True)
 
 
 frame, sentence,labellen,framelen,time= training_data[0]
