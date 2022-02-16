@@ -24,7 +24,7 @@ Python: 3.7.4
 ## Preparation 
 The path 
 "../glove2/glove.6B.50d.txt" 
-in "withtime_batch_dataload_inside.py" is the path of GloVe(Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. GloVe: Global Vectors for Word Representation. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Doha, Qatar, 1532–1543. https://doi.org/10.3115/v1/D14- 1162) embedding file.
+in "withtime_batch_dataload_inside.py" is the path of GloVe(Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. GloVe: Global Vectors for Word Representation. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Doha, Qatar, 1532–1543. https://doi.org/10.3115/v1/D14-1162) embedding file.
 
 You need to download it from https://nlp.stanford.edu/data/glove.6B.zip (Jeffrey Pennington and Richard Socher and Christopher D. Manning. 2014. GloVe: Global Vectors for Word Representation.) and put it at the relative path, or edit the path ""../glove2/glove.6B.50d.txt"" written in "withtime_batch_dataload_inside.py" for GloVe file for yourself.
 
