@@ -21,6 +21,8 @@ numpy:  1.17.2
 
 tensorboardX: 2.1 
 
+numba: 0.45.1 
+
 Python: 3.7.4
 
 ## Preparation 
