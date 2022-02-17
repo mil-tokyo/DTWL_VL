@@ -26,7 +26,7 @@ Python: 3.7.4
 
 
 
-## below are needed only for DILATE codes.
+# below are needed only for DILATE codes.
 
 llvmlite: 0.29.0        (Install before numba)
 
