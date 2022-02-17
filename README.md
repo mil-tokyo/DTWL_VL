@@ -23,6 +23,11 @@ tensorboardX: 2.1
 
 Python: 3.7.4
 
+
+
+
+## below are needed only for DILATE codes.
+
 llvmlite: 0.29.0        (Install before numba)
 
 numba: 0.45.1 
