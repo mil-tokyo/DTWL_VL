@@ -21,11 +21,15 @@ numpy:  1.17.2
 
 tensorboardX: 2.1 
 
+Python: 3.7.4
+
 llvmlite: 0.29.0        (Install before numba)
 
 numba: 0.45.1 
 
-Python: 3.7.4
+tslearn: 0.4.1
+
+h5py: 2.10.0 
 
 ## Preparation 
 The path 
