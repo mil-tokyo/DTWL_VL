@@ -54,7 +54,7 @@ You need to put the folder where the same folder the folder for the experiment e
 ##  Training Example
 You can start training by entering the folder ("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL") and
 running 
-`python Models.py`
+`python Models.py {gpu_id}` (input the id of dpu you want to use in {gpu_id})
 .
 
 
