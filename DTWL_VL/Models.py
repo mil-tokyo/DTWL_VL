@@ -2,7 +2,8 @@
 import torch
 import SDTWVL
 num_train2=8000
-gpu_ids=[7]##
+import sys
+gpu_ids= [(int)(sys.argv[1])]
 BATCH_SIZE=100
 subtract_ifmatched=0.1
 

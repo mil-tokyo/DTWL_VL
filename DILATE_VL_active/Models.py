@@ -1,6 +1,7 @@
 ''' Define the Transformer model '''
 import torch
-gpu_ids=[3]
+import sys
+gpu_ids= [(int)(sys.argv[1])]
 BATCH_SIZE=100
 
 
