@@ -14,6 +14,11 @@ The codes for implementation stated in the paper, and the code for creating data
 
 
 Our environment is below. Libraries below except torch can be installed with requirements.txt.
+Please run the code
+
+torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+
+to install torch.
 
 torch:  1.6.0+cu101
 
@@ -62,7 +67,7 @@ h5py: 2.10.0
 ## Preparation 
 The path 
 "../glove2/glove.6B.50d.txt" 
-in "withtime_batch_dataload_inside.py" under the directory　is the path of GloVe(Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. GloVe: Global Vectors for Word Representation. 
+in "withtime_batch_dataload_inside.py" under the 4 directories for experiment("MSEVariant", "DILATE_VL_active", "DILATE_VL_pad", "DTWL_VL") is the path of GloVe(Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. GloVe: Global Vectors for Word Representation. 
 In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Doha, Qatar, 1532–1543. https://doi.org/10.3115/v1/D14-1162) embedding file.
 
 You need to download it from　 https://nlp.stanford.edu/data/glove.6B.zip 　(Jeffrey Pennington and Richard Socher and Christopher D. Manning. 2014. GloVe: Global Vectors for Word Representation.) and put it at the place indicated with the relative path, or edit the path "../glove2/glove.6B.50d.txt" written in "withtime_batch_dataload_inside.py" for GloVe file for yourself.
