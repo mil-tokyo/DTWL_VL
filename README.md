@@ -70,7 +70,7 @@ You need to download it from　 https://nlp.stanford.edu/data/glove.6B.zip 　(J
 
 Also, you need to create the data for this experiment by running the code 
 `python textmake_withtime.py`
-in "DataCreation_40".
+in "DatasetCreationCode_40".
 You need to put the folder where the same folder the folder for the experiment exists, or edit the path "../DatasetCreationCode_40" in "Models.py"
  for every experiment data.
 
