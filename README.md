@@ -13,7 +13,7 @@ The codes for implementation stated in the paper, and the code for creating data
 
 
 
-Our environment is below.
+Our environment is below. Libraries below except torch can be installed with requirements.txt.
 
 torch:  1.6.0+cu101
 
