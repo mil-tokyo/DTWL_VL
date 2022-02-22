@@ -23,7 +23,23 @@ tensorboardX: 2.1
 
 Python: 3.7.4
 
+Cython: 0.29.13
 
+future: 0.17.1
+
+joblib: 0.13.2
+
+Pillow: 9.0.1
+
+protobuf: 3.11.3
+
+scikit-learn: 0.21.3
+
+scipy: 1.4.1
+
+setuptools: 41.4.0
+
+six: 1.12.0
 
 
 #### below are needed only for DILATE codes.
@@ -36,16 +52,8 @@ tslearn: 0.4.1
 
 h5py: 2.10.0 
 
-Cython: 0.29.13
-future: 0.17.1
-joblib        0.13.2
-Pillow        9.0.1
 
-protobuf      3.11.3
-scikit-learn  0.21.3
-scipy         1.4.1
-setuptools    41.4.0
-six           1.12.0
+
 
 
 
