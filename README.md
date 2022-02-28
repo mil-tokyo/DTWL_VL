@@ -15,11 +15,11 @@ The codes for implementation stated in the paper, and the code for creating data
 
 Our environment is below. Libraries below except torch can be installed with requirements.txt.
 
-<strong> Please run the code </strong>
+<strong> in order to install torch, please run the code </strong>
 
 `pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html`
 
-<strong>to install torch.</strong>
+
 
 torch:  1.6.0+cu101
 
