@@ -48,7 +48,6 @@ setuptools: 41.4.0
 six: 1.12.0
 
 
-#### below are needed only for DILATE codes.
 
 llvmlite: 0.29.0        (Install before numba)
 
