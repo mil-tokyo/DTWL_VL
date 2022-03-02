@@ -18,7 +18,7 @@ Required libraries can be installed by runninng
 `pip install -r requirements.txt　`.
 
 
-Our score of the environment was obtained with the version below:
+The strict library version we used in the experiment is below:
 
 torch:  1.6.0+cu101
 
