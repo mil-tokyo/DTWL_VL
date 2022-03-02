@@ -13,15 +13,9 @@ The codes for implementation stated in the paper, and the code for creating data
 
 
 
-Required environment is below. Libraries below except torch can be installed with requirements.txt.
+Required libraries can be installed with requirements.txt.
 
-<strong> in order to install torch, please run the code </strong>
-
-`pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html`
-
-
-
-Our environment was below:
+Our score of the environment was obtained with the version below:
 
 torch:  1.6.0+cu101
 
