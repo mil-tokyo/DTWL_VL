@@ -1,20 +1,7 @@
-numpy==1.17.2
-tensorboardX==2.1 
-Cython==0.29.13
-future==0.17.1
-joblib==0.13.2
-Pillow==9.0.1
-protobuf==3.11.3
-scikit-learn==0.21.3
-scipy==1.4.1
-setuptools==41.4.0
-six==1.12.0
-
-
+torch==1.6.0
 llvmlite==0.29.0 
 numba==0.45.1 
 tslearn==0.4.1
+tensorboardX==2.1
 h5py==2.10.0 
-
-#torch 
-#torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+numpy==1.17.2
