@@ -13,7 +13,10 @@ The codes for implementation stated in the paper, and the code for creating data
 
 
 
-Required libraries can be installed with requirements.txt.
+Required libraries can be installed by runninng
+
+`pip install -r requirements.txt　`.
+
 
 Our score of the environment was obtained with the version below:
 
